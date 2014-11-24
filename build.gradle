@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'cpp'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+repositories {
+	maven {
+		url 'https://github.com/Boukefalos/jlibloader/raw/mvn-repo/'
+	}
+}
+
+dependencies {
+	compile 'com.github.boukefalos:jlibloader:0.1'
+}
+
+group = 'com.github.boukefalos'
+project.archivesBaseName = 'jlibwiiuse'
+version = '0.13'
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.12'
+}
