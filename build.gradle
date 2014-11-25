@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin: 'cpp'
+apply plugin: 'c'
 apply plugin: 'maven'
 apply plugin: 'eclipse'
 
@@ -49,6 +49,15 @@ model {
 			})
 		}
 	}
+	repositories {
+		libs(PrebuiltLibraries) {
+			wiiuse { lib ->
+				binaries.withType(StaticLibraryBinary) {
+					staticLibraryFile = file("lib/${targetPlatform.name}/lib${lib.name}.lib")
+				}
+			}
+		}
+	}
 }
 
 def jniHeadersDir = file("$buildDir/headers")
@@ -72,13 +81,14 @@ libraries {
 	}
 	all {
 		binaries.all {
-			cppCompiler.args '-I' + jniHeadersDir
-			cppCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include"
-			cppCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include/win32"
+			cCompiler.args '-I' + jniHeadersDir
+			cCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include"
+			cCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include/win32"
 			linker.args '-Wl,--kill-at', '-static-libgcc', '-static-libstdc++'
 			tasks.withType(CppCompile) { task ->
 				task.dependsOn jniHeaders
 			}
+			lib library: 'wiiuse', linkage: 'static'
 		}
 	}
 }
