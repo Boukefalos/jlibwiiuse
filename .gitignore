@@ -1,1 +1,9 @@
-/build/
+build
+bin
+.gradle
+.settings
+.project
+.classpath
+.maven
+/.gradle
+/.classpath
