@@ -88,7 +88,7 @@ libraries {
 			cCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include"
 			cCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include/win32"
 			linker.args '-Wl,--kill-at', '-static-libgcc', '-static-libstdc++'
-			tasks.withType(CppCompile) { task ->
+			tasks.withType(CCompile) { task ->
 				task.dependsOn jniHeaders
 			}
 			lib library: 'wiiuse', linkage: 'static'
