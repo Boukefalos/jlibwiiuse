@@ -5,5 +5,5 @@ bin
 .project
 .classpath
 .maven
-/.gradle
-/.classpath
+.gradle
+.classpath

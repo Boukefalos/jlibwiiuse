@@ -16,6 +16,8 @@
  */
 package wiiusej;
 
+import com.github.boukefalos.jlibloader.Native;
+
 import wiiusej.wiiusejevents.utils.EventsGatherer;
 
 /**
@@ -26,7 +28,8 @@ import wiiusej.wiiusejevents.utils.EventsGatherer;
 public class WiiUseApi {
 
 	static {
-		System.loadLibrary("WiiuseJ");
+		Native.load("com.github.boukefalos", "libwiiuse");
+		Native.load("com.github.boukefalos", "jlibwiiuse");
 	}
 
 	private static WiiUseApi instance = new WiiUseApi();
