@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.boukefalos</groupId>
+  <artifactId>jlibwiiuse-windows-amd64</artifactId>
+  <version>0.12</version>
+  <versioning>
+    <versions>
+      <version>0.12</version>
+    </versions>
+    <lastUpdated>20141126144745</lastUpdated>
+  </versioning>
+</metadata>
