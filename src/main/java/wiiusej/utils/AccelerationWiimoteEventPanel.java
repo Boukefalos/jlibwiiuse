@@ -26,12 +26,12 @@ import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
  */
 public class AccelerationWiimoteEventPanel extends AccelerationPanel {
 
-	@Override
-	public RawAcceleration getRawAccelerationValue(GenericEvent e) {
-		if (e instanceof MotionSensingEvent) {
-			return ((MotionSensingEvent) e).getRawAcceleration();
-		}
-		return null;
-	}
+    @Override
+    public RawAcceleration getRawAccelerationValue(GenericEvent e) {
+        if (e instanceof MotionSensingEvent) {
+            return ((MotionSensingEvent) e).getRawAcceleration();
+        }
+        return null;
+    }
 
 }

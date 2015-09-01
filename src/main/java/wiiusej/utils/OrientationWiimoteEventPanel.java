@@ -27,12 +27,12 @@ import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
  */
 public class OrientationWiimoteEventPanel extends OrientationPanel {
 
-	@Override
-	public Orientation getOrientationValue(GenericEvent e) {
-		if (e instanceof MotionSensingEvent) {
-			return ((MotionSensingEvent) e).getOrientation();
-		}
-		return null;
-	}
+    @Override
+    public Orientation getOrientationValue(GenericEvent e) {
+        if (e instanceof MotionSensingEvent) {
+            return ((MotionSensingEvent) e).getOrientation();
+        }
+        return null;
+    }
 
 }

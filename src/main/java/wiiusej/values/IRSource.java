@@ -23,84 +23,84 @@ package wiiusej.values;
  */
 public class IRSource {
 
-	private int x;
-	private int y;
-	private short rx;
-	private short ry;
-	private short size;
+    private int x;
+    private int y;
+    private short rx;
+    private short ry;
+    private short size;
 
-	/**
-	 * Build an IR source with all details.
-	 * 
-	 * @param xx
-	 *            xx interpolated coordinates.
-	 * @param yy
-	 *            yy interpolated coordinates.
-	 * @param rxx
-	 *            raw X coordinate (0-1023).
-	 * @param ryy
-	 *            raw Y coordinate (0-1023).
-	 * @param si
-	 *            size of the IR dot (0-15).
-	 */
-	public IRSource(int xx, int yy, short rxx, short ryy, short si) {
-		x = xx;
-		y = yy;
-		rx = rxx;
-		ry = ryy;
-		size = si;
-	}
+    /**
+     * Build an IR source with all details.
+     * 
+     * @param xx
+     *            xx interpolated coordinates.
+     * @param yy
+     *            yy interpolated coordinates.
+     * @param rxx
+     *            raw X coordinate (0-1023).
+     * @param ryy
+     *            raw Y coordinate (0-1023).
+     * @param si
+     *            size of the IR dot (0-15).
+     */
+    public IRSource(int xx, int yy, short rxx, short ryy, short si) {
+        x = xx;
+        y = yy;
+        rx = rxx;
+        ry = ryy;
+        size = si;
+    }
 
-	/**
-	 * Return x interpolated coordinates.
-	 * 
-	 * @return the x
-	 */
-	public int getX() {
-		return x;
-	}
+    /**
+     * Return x interpolated coordinates.
+     * 
+     * @return the x
+     */
+    public int getX() {
+        return x;
+    }
 
-	/**
-	 * Return y interpolated coordinates.
-	 * 
-	 * @return the y
-	 */
-	public int getY() {
-		return y;
-	}
+    /**
+     * Return y interpolated coordinates.
+     * 
+     * @return the y
+     */
+    public int getY() {
+        return y;
+    }
 
-	/**
-	 * Return raw X coordinate (0-1023).
-	 * 
-	 * @return the rx
-	 */
-	public short getRx() {
-		return rx;
-	}
+    /**
+     * Return raw X coordinate (0-1023).
+     * 
+     * @return the rx
+     */
+    public short getRx() {
+        return rx;
+    }
 
-	/**
-	 * Return raw Y coordinate (0-1023).
-	 * 
-	 * @return the ry
-	 */
-	public short getRy() {
-		return ry;
-	}
+    /**
+     * Return raw Y coordinate (0-1023).
+     * 
+     * @return the ry
+     */
+    public short getRy() {
+        return ry;
+    }
 
-	/**
-	 * Return size of the IR dot (0-15).
-	 * 
-	 * @return the size
-	 */
-	public short getSize() {
-		return size;
-	}
+    /**
+     * Return size of the IR dot (0-15).
+     * 
+     * @return the size
+     */
+    public short getSize() {
+        return size;
+    }
 
-	@Override
-	public String toString() {
-		return "Interpolated coordinates (" + x + "," + y
-				+ "), Raw coordinates(" + rx + "," + ry + "), source size : "
-				+ size + ")";
-	}
+    @Override
+    public String toString() {
+        return "Interpolated coordinates (" + x + "," + y
+                + "), Raw coordinates(" + rx + "," + ry + "), source size : "
+                + size + ")";
+    }
 
 }

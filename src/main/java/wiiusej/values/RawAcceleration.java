@@ -23,59 +23,59 @@ package wiiusej.values;
  */
 public class RawAcceleration {
 
-	private short x;
-	private short y;
-	private short z;
+    private short x;
+    private short y;
+    private short z;
 
-	/**
-	 * Default constructor;
-	 */
-	public RawAcceleration() {
-		x = 0;
-		y = 0;
-		z = 0;
-	}
+    /**
+     * Default constructor;
+     */
+    public RawAcceleration() {
+        x = 0;
+        y = 0;
+        z = 0;
+    }
 
-	/**
-	 * Constructor with raw acceleration on each axis.
-	 * 
-	 * @param xx
-	 *            x value
-	 * @param yy
-	 *            x value
-	 * @param zz
-	 *            x value
-	 */
-	public RawAcceleration(short xx, short yy, short zz) {
-		x = xx;
-		y = yy;
-		z = zz;
-	}
+    /**
+     * Constructor with raw acceleration on each axis.
+     * 
+     * @param xx
+     *            x value
+     * @param yy
+     *            x value
+     * @param zz
+     *            x value
+     */
+    public RawAcceleration(short xx, short yy, short zz) {
+        x = xx;
+        y = yy;
+        z = zz;
+    }
 
-	/**
-	 * @return the x
-	 */
-	public short getX() {
-		return x;
-	}
+    /**
+     * @return the x
+     */
+    public short getX() {
+        return x;
+    }
 
-	/**
-	 * @return the y
-	 */
-	public short getY() {
-		return y;
-	}
+    /**
+     * @return the y
+     */
+    public short getY() {
+        return y;
+    }
 
-	/**
-	 * @return the z
-	 */
-	public short getZ() {
-		return z;
-	}
+    /**
+     * @return the z
+     */
+    public short getZ() {
+        return z;
+    }
 
-	@Override
-	public String toString() {
-		return "Raw acceleration : (" + x + ", " + y + "," + z + ")";
-	}
+    @Override
+    public String toString() {
+        return "Raw acceleration : (" + x + ", " + y + "," + z + ")";
+    }
 
 }

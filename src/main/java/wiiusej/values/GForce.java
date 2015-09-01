@@ -23,58 +23,58 @@ package wiiusej.values;
  */
 public class GForce {
 
-	private float x;
-	private float y;
-	private float z;
+    private float x;
+    private float y;
+    private float z;
 
-	/**
-	 * Default constructor;
-	 */
-	public GForce() {
-		x = 0;
-		y = 0;
-		z = 0;
-	}
+    /**
+     * Default constructor;
+     */
+    public GForce() {
+        x = 0;
+        y = 0;
+        z = 0;
+    }
 
-	/**
-	 * Constructor with gravity force on each axis.
-	 * 
-	 * @param xx
-	 *            x value
-	 * @param yy
-	 *            x value
-	 * @param zz
-	 *            x value
-	 */
-	public GForce(float xx, float yy, float zz) {
-		x = xx;
-		y = yy;
-		z = zz;
-	}
+    /**
+     * Constructor with gravity force on each axis.
+     * 
+     * @param xx
+     *            x value
+     * @param yy
+     *            x value
+     * @param zz
+     *            x value
+     */
+    public GForce(float xx, float yy, float zz) {
+        x = xx;
+        y = yy;
+        z = zz;
+    }
 
-	/**
-	 * @return the x
-	 */
-	public float getX() {
-		return x;
-	}
+    /**
+     * @return the x
+     */
+    public float getX() {
+        return x;
+    }
 
-	/**
-	 * @return the y
-	 */
-	public float getY() {
-		return y;
-	}
+    /**
+     * @return the y
+     */
+    public float getY() {
+        return y;
+    }
 
-	/**
-	 * @return the z
-	 */
-	public float getZ() {
-		return z;
-	}
+    /**
+     * @return the z
+     */
+    public float getZ() {
+        return z;
+    }
 
-	@Override
-	public String toString() {
-		return "Gravity force : (" + x + ", " + y + "," + z + ")";
-	}
+    @Override
+    public String toString() {
+        return "Gravity force : (" + x + ", " + y + "," + z + ")";
+    }
 }

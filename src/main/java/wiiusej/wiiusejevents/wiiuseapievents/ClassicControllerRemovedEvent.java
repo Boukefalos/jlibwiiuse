@@ -25,23 +25,23 @@ package wiiusej.wiiusejevents.wiiuseapievents;
  */
 public class ClassicControllerRemovedEvent extends WiiUseApiEvent {
 
-	/**
-	 * Construct the ClassicControllerRemovedEvent setting up the id.
-	 * 
-	 * @param id
-	 *            id of the wiimote.
-	 */
-	public ClassicControllerRemovedEvent(int id) {
-		super(id, WIIUSE_CLASSIC_CTRL_REMOVED);
-	}
+    /**
+     * Construct the ClassicControllerRemovedEvent setting up the id.
+     * 
+     * @param id
+     *            id of the wiimote.
+     */
+    public ClassicControllerRemovedEvent(int id) {
+        super(id, WIIUSE_CLASSIC_CTRL_REMOVED);
+    }
 
-	@Override
-	public String toString() {
-		String out = "";
-		/* Status */
-		out += "/*********** CLASSIC CONTROLLER REMOVED EVENT : WIIMOTE   ID :"
-				+ super.getWiimoteId() + " ********/\n";
-		return out;
-	}
+    @Override
+    public String toString() {
+        String out = "";
+        /* Status */
+        out += "/*********** CLASSIC CONTROLLER REMOVED EVENT : WIIMOTE   ID :"
+                + super.getWiimoteId() + " ********/\n";
+        return out;
+    }
 
 }

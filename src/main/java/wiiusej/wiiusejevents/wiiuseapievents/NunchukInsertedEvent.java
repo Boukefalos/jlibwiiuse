@@ -24,28 +24,28 @@ package wiiusej.wiiusejevents.wiiuseapievents;
  */
 public class NunchukInsertedEvent extends WiiUseApiEvent {
 
-	/**
-	 * Construct the NunchukInsertedEvent setting up the id.
-	 * 
-	 * @param id
-	 *            id of the wiimote.
-	 */
-	public NunchukInsertedEvent(int id) {
-		super(id, WIIUSE_NUNCHUK_INSERTED);
-	}
+    /**
+     * Construct the NunchukInsertedEvent setting up the id.
+     * 
+     * @param id
+     *            id of the wiimote.
+     */
+    public NunchukInsertedEvent(int id) {
+        super(id, WIIUSE_NUNCHUK_INSERTED);
+    }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see wiiusej.wiiusejevents.WiiUseApiEvent#toString()
-	 */
-	@Override
-	public String toString() {
-		String out = "";
-		/* Status */
-		out += "/*********** NUNCHUK INSERTED EVENT : WIIMOTE   ID :"
-				+ super.getWiimoteId() + " ********/\n";
-		return out;
-	}
+    /*
+     * (non-Javadoc)
+     * 
+     * @see wiiusej.wiiusejevents.WiiUseApiEvent#toString()
+     */
+    @Override
+    public String toString() {
+        String out = "";
+        /* Status */
+        out += "/*********** NUNCHUK INSERTED EVENT : WIIMOTE   ID :"
+                + super.getWiimoteId() + " ********/\n";
+        return out;
+    }
 
 }

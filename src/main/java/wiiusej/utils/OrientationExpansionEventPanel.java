@@ -27,12 +27,12 @@ import wiiusej.wiiusejevents.physicalevents.NunchukEvent;
  */
 public class OrientationExpansionEventPanel extends OrientationPanel {
 
-	@Override
-	public Orientation getOrientationValue(GenericEvent e) {
-		if (e instanceof NunchukEvent) {
-			return ((NunchukEvent) e).getNunchukMotionSensingEvent()
-					.getOrientation();
-		}
-		return null;
-	}
+    @Override
+    public Orientation getOrientationValue(GenericEvent e) {
+        if (e instanceof NunchukEvent) {
+            return ((NunchukEvent) e).getNunchukMotionSensingEvent()
+                    .getOrientation();
+        }
+        return null;
+    }
 }

@@ -27,11 +27,11 @@ import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
  */
 public class GForceWiimoteEventPanel extends GForcePanel {
 
-	@Override
-	public GForce getGForceValue(GenericEvent e) {
-		if (e instanceof MotionSensingEvent) {
-			return ((MotionSensingEvent) e).getGforce();
-		}
-		return null;
-	}
+    @Override
+    public GForce getGForceValue(GenericEvent e) {
+        if (e instanceof MotionSensingEvent) {
+            return ((MotionSensingEvent) e).getGforce();
+        }
+        return null;
+    }
 }

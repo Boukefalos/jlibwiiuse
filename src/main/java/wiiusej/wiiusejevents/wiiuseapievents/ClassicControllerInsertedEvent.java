@@ -24,23 +24,23 @@ package wiiusej.wiiusejevents.wiiuseapievents;
  */
 public class ClassicControllerInsertedEvent extends WiiUseApiEvent {
 
-	/**
-	 * Construct the ClassicControllerInsertedEvent setting up the id.
-	 * 
-	 * @param id
-	 *            id of the wiimote.
-	 */
-	public ClassicControllerInsertedEvent(int id) {
-		super(id, WIIUSE_CLASSIC_CTRL_INSERTED);
-	}
+    /**
+     * Construct the ClassicControllerInsertedEvent setting up the id.
+     * 
+     * @param id
+     *            id of the wiimote.
+     */
+    public ClassicControllerInsertedEvent(int id) {
+        super(id, WIIUSE_CLASSIC_CTRL_INSERTED);
+    }
 
-	@Override
-	public String toString() {
-		String out = "";
-		/* Status */
-		out += "/*********** CLASSIC CONTROLLER INSERTED EVENT : WIIMOTE   ID :"
-				+ super.getWiimoteId() + " ********/\n";
-		return out;
-	}
+    @Override
+    public String toString() {
+        String out = "";
+        /* Status */
+        out += "/*********** CLASSIC CONTROLLER INSERTED EVENT : WIIMOTE   ID :"
+                + super.getWiimoteId() + " ********/\n";
+        return out;
+    }
 
 }

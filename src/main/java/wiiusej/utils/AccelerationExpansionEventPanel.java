@@ -27,13 +27,13 @@ import wiiusej.wiiusejevents.physicalevents.NunchukEvent;
  */
 public class AccelerationExpansionEventPanel extends AccelerationPanel {
 
-	@Override
-	public RawAcceleration getRawAccelerationValue(GenericEvent e) {
-		if (e instanceof NunchukEvent) {
-			return ((NunchukEvent) e).getNunchukMotionSensingEvent()
-					.getRawAcceleration();
-		}
-		return null;
-	}
+    @Override
+    public RawAcceleration getRawAccelerationValue(GenericEvent e) {
+        if (e instanceof NunchukEvent) {
+            return ((NunchukEvent) e).getNunchukMotionSensingEvent()
+                    .getRawAcceleration();
+        }
+        return null;
+    }
 
 }
