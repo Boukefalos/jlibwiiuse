@@ -23,28 +23,28 @@ package wiiusej.wiiusejevents.wiiuseapievents;
  */
 public class NunchukRemovedEvent extends WiiUseApiEvent {
 
-    /**
-     * Construct the NunchukInsertedEvent setting up the id.
-     * 
-     * @param id
-     *            id of the wiimote.
-     */
-    public NunchukRemovedEvent(int id) {
-        super(id, WIIUSE_NUNCHUK_REMOVED);
-    }
+	/**
+	 * Construct the NunchukInsertedEvent setting up the id.
+	 * 
+	 * @param id
+	 *            id of the wiimote.
+	 */
+	public NunchukRemovedEvent(int id) {
+		super(id, WIIUSE_NUNCHUK_REMOVED);
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see wiiusej.wiiusejevents.WiiUseApiEvent#toString()
-     */
-    @Override
-    public String toString() {
-        String out = "";
-        /* Status */
-        out += "/*********** NUNCHUK REMOVED EVENT : WIIMOTE   ID :"
-                + super.getWiimoteId() + " ********/\n";
-        return out;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see wiiusej.wiiusejevents.WiiUseApiEvent#toString()
+	 */
+	@Override
+	public String toString() {
+		String out = "";
+		/* Status */
+		out += "/*********** NUNCHUK REMOVED EVENT : WIIMOTE   ID :"
+				+ super.getWiimoteId() + " ********/\n";
+		return out;
+	}
 
 }

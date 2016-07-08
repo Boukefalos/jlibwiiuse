@@ -16,44 +16,47 @@
  */
 package wiiusej.wiiusejevents;
 
+import java.io.Serializable;
+
 /**
  * Abstract mother class representing an event with a wiimote id.
  * 
  * @author guiguito
  */
-public abstract class GenericEvent {
-    
-    /* ID */
-    private int wiimoteId = -1;
-    
-    /**
-     * Construct the WiiUseApiEvent setting up the id.
-     * 
-     * @param id
-     *            the Wiimote id           
-     */
-    public GenericEvent(int id) {
-        wiimoteId = id;
-    }
-    
-    /**
-     * Get Wiimote ID
-     * 
-     * @return the wiimote id.
-     */
-    public int getWiimoteId() {
-        return wiimoteId;
-    }
-    
-    /**
-     * Set Wiimote ID
-     * 
-     * @param wiimoteId
-     *            id of the wiimote
-     */
-    void setWiimoteId(int wiimoteId) {
-        this.wiimoteId = wiimoteId;
-    }
-    
-    public abstract String toString();
+public abstract class GenericEvent implements Serializable {
+    protected static final long serialVersionUID = 1L;
+	
+	/* ID */
+	private int wiimoteId = -1;
+	
+	/**
+	 * Construct the WiiUseApiEvent setting up the id.
+	 * 
+	 * @param id
+	 *            the Wiimote id           
+	 */
+	public GenericEvent(int id) {
+		wiimoteId = id;
+	}
+	
+	/**
+	 * Get Wiimote ID
+	 * 
+	 * @return the wiimote id.
+	 */
+	public int getWiimoteId() {
+		return wiimoteId;
+	}
+	
+	/**
+	 * Set Wiimote ID
+	 * 
+	 * @param wiimoteId
+	 *            id of the wiimote
+	 */
+	void setWiimoteId(int wiimoteId) {
+		this.wiimoteId = wiimoteId;
+	}
+	
+	public abstract String toString();
 }

@@ -25,23 +25,23 @@ package wiiusej.wiiusejevents.wiiuseapievents;
  */
 public class GuitarHeroInsertedEvent extends WiiUseApiEvent {
 
-    /**
-     * Construct the GuitarHeroInsertedEvent setting up the id.
-     * 
-     * @param id
-     *            id of the wiimote.
-     */
-    public GuitarHeroInsertedEvent(int id) {
-        super(id, WIIUSE_GUITAR_HERO_3_CTRL_INSERTED);
-    }
+	/**
+	 * Construct the GuitarHeroInsertedEvent setting up the id.
+	 * 
+	 * @param id
+	 *            id of the wiimote.
+	 */
+	public GuitarHeroInsertedEvent(int id) {
+		super(id, WIIUSE_GUITAR_HERO_3_CTRL_INSERTED);
+	}
 
-    @Override
-    public String toString() {
-        String out = "";
-        /* Status */
-        out += "/*********** GUITAR HERO INSERTED EVENT : WIIMOTE   ID :"
-                + super.getWiimoteId() + " ********/\n";
-        return out;
-    }
+	@Override
+	public String toString() {
+		String out = "";
+		/* Status */
+		out += "/*********** GUITAR HERO INSERTED EVENT : WIIMOTE   ID :"
+				+ super.getWiimoteId() + " ********/\n";
+		return out;
+	}
 
 }

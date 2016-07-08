@@ -23,67 +23,67 @@ package wiiusej.wiiusejevents.physicalevents;
  */
 public class NunchukButtonsEvent extends ButtonsEvent {
 
-    private static short NUNCHUK_BUTTON_Z = 0x01;
-    private static short NUNCHUK_BUTTON_C = 0x02;
-    private static short NUNCHUK_BUTTON_ALL = 0x03;
+	private static short NUNCHUK_BUTTON_Z = 0x01;
+	private static short NUNCHUK_BUTTON_C = 0x02;
+	private static short NUNCHUK_BUTTON_ALL = 0x03;
 
-    /**
-     * Constructor of the nunchuk buttons Event.
-     * 
-     * @param id
-     *            id of the wiimote.
-     * @param buttonsJustPressed
-     *            buttons just pressed.
-     * @param buttonsJustReleased
-     *            buttons just released.
-     * @param buttonsHeld
-     *            buttons just pressed.
-     */
-    public NunchukButtonsEvent(int id, short buttonsJustPressed,
-            short buttonsJustReleased, short buttonsHeld) {
-        super(id, buttonsJustPressed, buttonsJustReleased, buttonsHeld);
-    }
+	/**
+	 * Constructor of the nunchuk buttons Event.
+	 * 
+	 * @param id
+	 *            id of the wiimote.
+	 * @param buttonsJustPressed
+	 *            buttons just pressed.
+	 * @param buttonsJustReleased
+	 *            buttons just released.
+	 * @param buttonsHeld
+	 *            buttons just pressed.
+	 */
+	public NunchukButtonsEvent(int id, short buttonsJustPressed,
+			short buttonsJustReleased, short buttonsHeld) {
+		super(id, buttonsJustPressed, buttonsJustReleased, buttonsHeld);
+	}
 
-    /* Button Z */
+	/* Button Z */
 
-    public boolean isButtonZJustPressed() {
-        return isButtonJustPressed(NUNCHUK_BUTTON_Z);
-    }
+	public boolean isButtonZJustPressed() {
+		return isButtonJustPressed(NUNCHUK_BUTTON_Z);
+	}
 
-    public boolean isButtonZJustReleased() {
-        return isButtonJustReleased(NUNCHUK_BUTTON_Z);
-    }
+	public boolean isButtonZJustReleased() {
+		return isButtonJustReleased(NUNCHUK_BUTTON_Z);
+	}
 
-    public boolean isButtonZeHeld() {
-        return isButtonHeld(NUNCHUK_BUTTON_Z);
-    }
+	public boolean isButtonZeHeld() {
+		return isButtonHeld(NUNCHUK_BUTTON_Z);
+	}
 
-    public boolean isButtonZPressed() {
-        return isButtonPressed(NUNCHUK_BUTTON_Z);
-    }
+	public boolean isButtonZPressed() {
+		return isButtonPressed(NUNCHUK_BUTTON_Z);
+	}
 
-    /* Button Z */
+	/* Button Z */
 
-    public boolean isButtonCJustPressed() {
-        return isButtonJustPressed(NUNCHUK_BUTTON_C);
-    }
+	public boolean isButtonCJustPressed() {
+		return isButtonJustPressed(NUNCHUK_BUTTON_C);
+	}
 
-    public boolean isButtonCJustReleased() {
-        return isButtonJustReleased(NUNCHUK_BUTTON_C);
-    }
+	public boolean isButtonCJustReleased() {
+		return isButtonJustReleased(NUNCHUK_BUTTON_C);
+	}
 
-    public boolean isButtonCHeld() {
-        return isButtonHeld(NUNCHUK_BUTTON_C);
-    }
+	public boolean isButtonCHeld() {
+		return isButtonHeld(NUNCHUK_BUTTON_C);
+	}
 
-    public boolean isButtonCPressed() {
-        return isButtonPressed(NUNCHUK_BUTTON_C);
-    }
+	public boolean isButtonCPressed() {
+		return isButtonPressed(NUNCHUK_BUTTON_C);
+	}
 
-    @Override
-    public String toString() {
-        return "/******** Buttons for Nunchuk Event ********/\n"
-                + super.toString();
-    }
+	@Override
+	public String toString() {
+		return "/******** Buttons for Nunchuk Event ********/\n"
+				+ super.toString();
+	}
 
 }

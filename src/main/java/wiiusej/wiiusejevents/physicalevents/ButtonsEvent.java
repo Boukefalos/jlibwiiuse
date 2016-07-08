@@ -25,104 +25,104 @@ import wiiusej.wiiusejevents.GenericEvent;
  */
 public abstract class ButtonsEvent extends GenericEvent {
 
-    /* Buttons */
-    private short buttonsJustPressed = 0;
-    private short buttonsJustReleased = 0;
-    private short buttonsHeld = 0;
+	/* Buttons */
+	private short buttonsJustPressed = 0;
+	private short buttonsJustReleased = 0;
+	private short buttonsHeld = 0;
 
-    /**
-     * Constructor of the button Event.
-     * 
-     * @param id
-     *            id of the wiimote concerned.
-     * @param buttonsJustPressed
-     *            buttons just pressed.
-     * @param buttonsJustReleased
-     *            buttons just released.
-     * @param buttonsHeld
-     *            buttons just held.
-     */
-    public ButtonsEvent(int id, short buttonsJustPressed,
-            short buttonsJustReleased, short buttonsHeld) {
-        super(id);
-        setAllButtons(buttonsJustPressed, buttonsJustReleased, buttonsHeld);
-    }
+	/**
+	 * Constructor of the button Event.
+	 * 
+	 * @param id
+	 *            id of the wiimote concerned.
+	 * @param buttonsJustPressed
+	 *            buttons just pressed.
+	 * @param buttonsJustReleased
+	 *            buttons just released.
+	 * @param buttonsHeld
+	 *            buttons just held.
+	 */
+	public ButtonsEvent(int id, short buttonsJustPressed,
+			short buttonsJustReleased, short buttonsHeld) {
+		super(id);
+		setAllButtons(buttonsJustPressed, buttonsJustReleased, buttonsHeld);
+	}
 
-    /**
-     * Set all buttons in one method.
-     * 
-     * @param buttonsJustPressed
-     * @param buttonsJustReleased
-     * @param buttonsHeld
-     */
-    private void setAllButtons(short buttonsJustPressed,
-            short buttonsJustReleased, short buttonsHeld) {
-        this.buttonsJustPressed = buttonsJustPressed;
-        this.buttonsJustReleased = buttonsJustReleased;
-        this.buttonsHeld = buttonsHeld;
-    }
+	/**
+	 * Set all buttons in one method.
+	 * 
+	 * @param buttonsJustPressed
+	 * @param buttonsJustReleased
+	 * @param buttonsHeld
+	 */
+	private void setAllButtons(short buttonsJustPressed,
+			short buttonsJustReleased, short buttonsHeld) {
+		this.buttonsJustPressed = buttonsJustPressed;
+		this.buttonsJustReleased = buttonsJustReleased;
+		this.buttonsHeld = buttonsHeld;
+	}
 
-    /**
-     * Get the short storing the buttons just pressed
-     * 
-     * @return the short storing the buttons just pressed
-     */
-    public short getButtonsJustPressed() {
-        return buttonsJustPressed;
-    }
+	/**
+	 * Get the short storing the buttons just pressed
+	 * 
+	 * @return the short storing the buttons just pressed
+	 */
+	public short getButtonsJustPressed() {
+		return buttonsJustPressed;
+	}
 
-    /**
-     * Get the short storing the buttons just released
-     * 
-     * @return the short storing the buttons just released
-     */
-    public short getButtonsJustReleased() {
-        return buttonsJustReleased;
-    }
+	/**
+	 * Get the short storing the buttons just released
+	 * 
+	 * @return the short storing the buttons just released
+	 */
+	public short getButtonsJustReleased() {
+		return buttonsJustReleased;
+	}
 
-    /**
-     * get the short storing the buttons held
-     * 
-     * @return the short storing the buttons held
-     */
-    public short getButtonsHeld() {
-        return buttonsHeld;
-    }
+	/**
+	 * get the short storing the buttons held
+	 * 
+	 * @return the short storing the buttons held
+	 */
+	public short getButtonsHeld() {
+		return buttonsHeld;
+	}
 
-    /** **************** BUTTONS Methods ***************** */
-    /* generic button functions */
+	/** **************** BUTTONS Methods ***************** */
+	/* generic button functions */
 
-    protected boolean buttonTest(int buttonBitsDefinition, int buttons) {
-        return (buttons & buttonBitsDefinition) == buttonBitsDefinition;
-    }
+	protected boolean buttonTest(int buttonBitsDefinition, int buttons) {
+		return (buttons & buttonBitsDefinition) == buttonBitsDefinition;
+	}
 
-    protected boolean isButtonJustPressed(int buttonBitsDefinition) {
-        return buttonTest(buttonBitsDefinition, buttonsJustPressed)
-                && !isButtonHeld(buttonBitsDefinition);
-    }
+	protected boolean isButtonJustPressed(int buttonBitsDefinition) {
+		return buttonTest(buttonBitsDefinition, buttonsJustPressed)
+				&& !isButtonHeld(buttonBitsDefinition);
+	}
 
-    protected boolean isButtonJustReleased(int buttonBitsDefinition) {
-        return buttonTest(buttonBitsDefinition, buttonsJustReleased);
-    }
+	protected boolean isButtonJustReleased(int buttonBitsDefinition) {
+		return buttonTest(buttonBitsDefinition, buttonsJustReleased);
+	}
 
-    protected boolean isButtonHeld(int buttonBitsDefinition) {
-        return buttonTest(buttonBitsDefinition, buttonsHeld);
-    }
+	protected boolean isButtonHeld(int buttonBitsDefinition) {
+		return buttonTest(buttonBitsDefinition, buttonsHeld);
+	}
 
-    protected boolean isButtonPressed(int buttonBitsDefinition) {
-        return isButtonHeld(buttonBitsDefinition)
-                || isButtonJustPressed(buttonBitsDefinition);
-    }
+	protected boolean isButtonPressed(int buttonBitsDefinition) {
+		return isButtonHeld(buttonBitsDefinition)
+				|| isButtonJustPressed(buttonBitsDefinition);
+	}
 
-    @Override
-    public String toString() {
-        String out = "";
-        /* Display buttons */
-        out += "/******** Buttons ********/\n";
-        out += "--- Buttons just pressed : " + buttonsJustPressed + "\n";
-        out += "--- Buttons just released : " + buttonsJustReleased + "\n";
-        out += "--- Buttons held : " + buttonsHeld + "\n";
-        return out;
-    }
+	@Override
+	public String toString() {
+		String out = "";
+		/* Display buttons */
+		out += "/******** Buttons ********/\n";
+		out += "--- Buttons just pressed : " + buttonsJustPressed + "\n";
+		out += "--- Buttons just released : " + buttonsJustReleased + "\n";
+		out += "--- Buttons held : " + buttonsHeld + "\n";
+		return out;
+	}
 
 }

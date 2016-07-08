@@ -20,6 +20,8 @@ import wiiusej.wiiusejevents.physicalevents.ExpansionEvent;
 import wiiusej.wiiusejevents.physicalevents.IREvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -39,107 +41,109 @@ import wiiusej.wiiusejevents.wiiuseapievents.StatusEvent;
  */
 public interface WiimoteListener extends java.util.EventListener {
 
-    /**
-     * Method called on a button Event.
-     * 
-     * @param e
-     *            the buttonEvent with the last informations about the buttons
-     *            of the wiimote.
-     */
-    void onButtonsEvent(WiimoteButtonsEvent e);
+	/**
+	 * Method called on a button Event.
+	 * 
+	 * @param e
+	 *            the buttonEvent with the last informations about the buttons
+	 *            of the wiimote.
+	 */
+	void onButtonsEvent(WiimoteButtonsEvent e);
 
-    /**
-     * Method called when an IR event occurs.
-     * 
-     * @param e
-     *            the IREvent with the IR points seen.
-     */
-    void onIrEvent(IREvent e);
+	/**
+	 * Method called when an IR event occurs.
+	 * 
+	 * @param e
+	 *            the IREvent with the IR points seen.
+	 */
+	void onIrEvent(IREvent e);
 
-    /**
-     * Method called when a motion sensing event occurs.
-     * 
-     * @param e
-     *            the motion sensing event with orientation and acceleration.
-     */
-    void onMotionSensingEvent(MotionSensingEvent e);
+	/**
+	 * Method called when a motion sensing event occurs.
+	 * 
+	 * @param e
+	 *            the motion sensing event with orientation and acceleration.
+	 */
+	void onMotionSensingEvent(MotionSensingEvent e);
 
-    /**
-     * Method called when an expansion event occurs.
-     * 
-     * @param e
-     *            the expansion event occured.
-     */
-    void onExpansionEvent(ExpansionEvent e);
+	/**
+	 * Method called when an expansion event occurs.
+	 * 
+	 * @param e
+	 *            the expansion event occured.
+	 */
+	void onExpansionEvent(ExpansionEvent e);
 
-    /**
-     * Method called on a status event. A status event occurs when : - we ask it -
-     * an expansion controller has been plugged - an expansion controller has
-     * been unplugged This is where you can get the different values of the
-     * parameters setup on your wiimote.
-     * 
-     * @param e
-     *            the status event.
-     */
-    void onStatusEvent(StatusEvent e);
+	/**
+	 * Method called on a status event. A status event occurs when : - we ask it -
+	 * an expansion controller has been plugged - an expansion controller has
+	 * been unplugged This is where you can get the different values of the
+	 * parameters setup on your wiimote.
+	 * 
+	 * @param e
+	 *            the status event.
+	 */
+	void onStatusEvent(StatusEvent e);
 
-    /**
-     * This is the method called when a disconnection event occurs. A
-     * disconnection event happens when : - there are no battery left - the
-     * wiimote has just been turned off - the connection is dropped
-     * 
-     * @param e
-     *            the disconnection event.
-     */
-    void onDisconnectionEvent(DisconnectionEvent e);
+	/**
+	 * This is the method called when a disconnection event occurs. A
+	 * disconnection event happens when : - there are no battery left - the
+	 * wiimote has just been turned off - the connection is dropped
+	 * 
+	 * @param e
+	 *            the disconnection event.
+	 */
+	void onDisconnectionEvent(DisconnectionEvent e);
 
-    /**
-     * This is the method called when a NunchukInsertedEvent occurs.
-     * 
-     * @param e
-     *            the NunchukInsertedEvent.
-     */
-    void onNunchukInsertedEvent(NunchukInsertedEvent e);
+	/**
+	 * This is the method called when a NunchukInsertedEvent occurs.
+	 * 
+	 * @param e
+	 *            the NunchukInsertedEvent.
+	 */
+	void onNunchukInsertedEvent(NunchukInsertedEvent e);
 
-    /**
-     * This is the method called when a NunchukRemovedEvent occurs.
-     * 
-     * @param e
-     *            the NunchukRemovedEvent.
-     */
-    void onNunchukRemovedEvent(NunchukRemovedEvent e);
-    
-    
-    /**
-     * This is the method called when a GuitarHeroInsertedEvent occurs.
-     * 
-     * @param e
-     *            the GuitarHeroInsertedEvent.
-     */
-    void onGuitarHeroInsertedEvent(GuitarHeroInsertedEvent e);
+	/**
+	 * This is the method called when a NunchukRemovedEvent occurs.
+	 * 
+	 * @param e
+	 *            the NunchukRemovedEvent.
+	 */
+	void onNunchukRemovedEvent(NunchukRemovedEvent e);
+	
+	
+	/**
+	 * This is the method called when a GuitarHeroInsertedEvent occurs.
+	 * 
+	 * @param e
+	 *            the GuitarHeroInsertedEvent.
+	 */
+	void onGuitarHeroInsertedEvent(GuitarHeroInsertedEvent e);
 
-    /**
-     * This is the method called when a GuitarHeroRemovedEvent occurs.
-     * 
-     * @param e
-     *            the GuitarHeroRemovedEvent.
-     */
-    void onGuitarHeroRemovedEvent(GuitarHeroRemovedEvent e);
-    
-    /**
-     * This is the method called when a ClassicControllerInsertedEvent occurs.
-     * 
-     * @param e
-     *            the ClassicControllerInsertedEvent.
-     */
-    void onClassicControllerInsertedEvent(ClassicControllerInsertedEvent e);
+	/**
+	 * This is the method called when a GuitarHeroRemovedEvent occurs.
+	 * 
+	 * @param e
+	 *            the GuitarHeroRemovedEvent.
+	 */
+	void onGuitarHeroRemovedEvent(GuitarHeroRemovedEvent e);
+	
+	/**
+	 * This is the method called when a ClassicControllerInsertedEvent occurs.
+	 * 
+	 * @param e
+	 *            the ClassicControllerInsertedEvent.
+	 */
+	void onClassicControllerInsertedEvent(ClassicControllerInsertedEvent e);
 
-    /**
-     * This is the method called when a ClassicControllerRemovedEvent occurs.
-     * 
-     * @param e
-     *            the ClassicControllerRemovedEvent.
-     */
-    void onClassicControllerRemovedEvent(ClassicControllerRemovedEvent e);
+	/**
+	 * This is the method called when a ClassicControllerRemovedEvent occurs.
+	 * 
+	 * @param e
+	 *            the ClassicControllerRemovedEvent.
+	 */
+	void onClassicControllerRemovedEvent(ClassicControllerRemovedEvent e);
 
+	void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent e);
+	void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent e);
 }

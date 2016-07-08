@@ -25,16 +25,16 @@ import wiiusej.wiiusejevents.GenericEvent;
  */
 public abstract class ExpansionEvent extends GenericEvent {
 
-    /**
-     * Constructor of an ExpansionEvent.
-     * 
-     * @param id
-     *            id of the wiimote to which the expansion is connected.
-     */
-    public ExpansionEvent(int id) {
-        super(id);
-    }
-    
-    public abstract String toString();
+	/**
+	 * Constructor of an ExpansionEvent.
+	 * 
+	 * @param id
+	 *            id of the wiimote to which the expansion is connected.
+	 */
+	public ExpansionEvent(int id) {
+		super(id);
+	}
+	
+	public abstract String toString();
 
 }
