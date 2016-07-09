@@ -144,6 +144,19 @@ public interface WiimoteListener extends java.util.EventListener {
 	 */
 	void onClassicControllerRemovedEvent(ClassicControllerRemovedEvent e);
 
+	/**
+	 * This is the method called when a BalanceBoardInsertedEvent occurs.
+	 * 
+	 * @param e
+	 *            the BalanceBoardInsertedEvent.
+	 */
 	void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent e);
+	
+	/**
+	 * This is the method called when a BalanceBoardRemovedEvent occurs.
+	 * 
+	 * @param e
+	 *            the BalanceBoardRemovedEvent.
+	 */
 	void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent e);
 }

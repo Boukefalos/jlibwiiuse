@@ -33,6 +33,8 @@ import wiiusej.wiiusejevents.physicalevents.JoystickEvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -434,6 +436,14 @@ public class ClassicControllerButtonsEventPanel extends javax.swing.JPanel imple
     public void onClassicControllerRemovedEvent(ClassicControllerRemovedEvent arg0) {
         clearView();
     }
+
+	public void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent arg0) {
+	//do nothing
+	}
+
+	public void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent arg0) {
+	//do nothing		
+	}
 
     public Color getHeldColor() {
         return heldColor;

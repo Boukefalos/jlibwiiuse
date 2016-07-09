@@ -31,6 +31,8 @@ import wiiusej.wiiusejevents.physicalevents.NunchukButtonsEvent;
 import wiiusej.wiiusejevents.physicalevents.NunchukEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -425,6 +427,16 @@ public class NunchukGuiTest extends javax.swing.JFrame implements
             ClassicControllerRemovedEvent arg0) {
         // nothing
     }
+
+	public void onBalanceBoardInsertedEvent(
+			BalanceBoardInsertedEvent arg0) {
+		// nothing
+	}
+
+	public void onBalanceBoardRemovedEvent(
+			BalanceBoardRemovedEvent arg0) {
+		// nothing		
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cButton;

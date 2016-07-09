@@ -26,7 +26,7 @@ import wiiusej.wiiusejevents.physicalevents.JoystickEvent;
  * 
  * @author guiguito
  */
-public class GuitarHeroJoystickEventPanel extends JoystickEventPanel{
+public class GuitarHeroJoystickEventPanel extends JoystickEventPanel {
 
     @Override
     public JoystickEvent getJoystickEvent(ExpansionEvent e) {

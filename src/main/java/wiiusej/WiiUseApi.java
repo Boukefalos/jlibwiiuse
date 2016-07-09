@@ -348,7 +348,6 @@ public class WiiUseApi {
 	 */
 	native void specialPoll(EventsGatherer gath);
 
-	
 	/**
 	 * Speaker
 	 */

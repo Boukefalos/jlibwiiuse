@@ -23,6 +23,8 @@ import wiiusej.wiiusejevents.physicalevents.IREvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -256,6 +258,15 @@ public class GuitarHero3ButtonsEventPanel extends javax.swing.JPanel implements 
     public void onClassicControllerRemovedEvent(ClassicControllerRemovedEvent arg0) {
     //do nothing
     }
+    
+	public void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent arg0) {
+	//do nothing		
+	}
+
+	public void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent arg0) {
+	//do nothing		
+	}
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel RightPanel;
     private javax.swing.JToggleButton blueButton;

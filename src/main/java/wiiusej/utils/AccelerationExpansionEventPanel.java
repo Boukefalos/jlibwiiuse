@@ -19,6 +19,8 @@ package wiiusej.utils;
 import wiiusej.values.RawAcceleration;
 import wiiusej.wiiusejevents.GenericEvent;
 import wiiusej.wiiusejevents.physicalevents.NunchukEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 
 /**
  * Panel to display Acceleration in a MotionSensingEvent from an expansion.
@@ -35,5 +37,17 @@ public class AccelerationExpansionEventPanel extends AccelerationPanel {
         }
         return null;
     }
+
+	@Override
+	public void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

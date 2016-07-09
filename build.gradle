@@ -18,7 +18,7 @@ dependencies {
 
 group = 'com.github.boukefalos'
 project.archivesBaseName = 'jlibwiiuse'
-version = '0.12'
+version = '0.13'
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '1.12'

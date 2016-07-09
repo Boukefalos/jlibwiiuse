@@ -39,6 +39,8 @@ import wiiusej.wiiusejevents.physicalevents.IREvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -378,6 +380,16 @@ public class WiiuseJGuiTest extends javax.swing.JFrame implements
             expansionFrame = null;
         }
     }
+
+	public void onBalanceBoardInsertedEvent(
+			BalanceBoardInsertedEvent arg0) {
+		// nothing
+	}
+
+	public void onBalanceBoardRemovedEvent(
+			BalanceBoardRemovedEvent arg0) {
+		// nothing
+	}
 
     /**
      * This method is called from within the constructor to initialize the form.

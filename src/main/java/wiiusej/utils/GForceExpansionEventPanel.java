@@ -19,6 +19,8 @@ package wiiusej.utils;
 import wiiusej.values.GForce;
 import wiiusej.wiiusejevents.GenericEvent;
 import wiiusej.wiiusejevents.physicalevents.NunchukEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 
 /**
  * Panel to display GForce in a MotionSensingEvent from an expansion.
@@ -34,5 +36,4 @@ public class GForceExpansionEventPanel extends GForcePanel{
         }
         return null;
     }
-
 }

@@ -31,6 +31,8 @@ import wiiusej.wiiusejevents.physicalevents.IREvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -379,4 +381,16 @@ public class ButtonsEventPanel extends javax.swing.JPanel implements
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+
+	@Override
+	public void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }

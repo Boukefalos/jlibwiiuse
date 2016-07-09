@@ -25,6 +25,8 @@ import wiiusej.wiiusejevents.physicalevents.IREvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -160,6 +162,14 @@ public class ClassicControllerGuiTest extends javax.swing.JFrame implements Wiim
     public void onClassicControllerRemovedEvent(ClassicControllerRemovedEvent arg0) {
     // nothing to do
     }
+
+	public void onBalanceBoardInsertedEvent(BalanceBoardInsertedEvent arg0) {
+	// nothing to do
+	}
+
+	public void onBalanceBoardRemovedEvent(BalanceBoardRemovedEvent arg0) {
+	// nothing to do		
+	}
 
     public static void main(String[] args) {
         Wiimote[] wiimotes = WiiUseApiManager.getWiimotes(1, true);

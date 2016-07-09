@@ -30,6 +30,8 @@ import wiiusej.wiiusejevents.physicalevents.JoystickEvent;
 import wiiusej.wiiusejevents.physicalevents.MotionSensingEvent;
 import wiiusej.wiiusejevents.physicalevents.WiimoteButtonsEvent;
 import wiiusej.wiiusejevents.utils.WiimoteListener;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardInsertedEvent;
+import wiiusej.wiiusejevents.wiiuseapievents.BalanceBoardRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerInsertedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.ClassicControllerRemovedEvent;
 import wiiusej.wiiusejevents.wiiuseapievents.DisconnectionEvent;
@@ -191,6 +193,16 @@ public abstract class JoystickEventPanel extends javax.swing.JPanel implements
         // nothing
     }
 
+	public void onBalanceBoardInsertedEvent(
+			BalanceBoardInsertedEvent arg0) {
+		// nothing		
+	}
+
+	public void onBalanceBoardRemovedEvent(
+			BalanceBoardRemovedEvent arg0) {
+		// nothing		
+	}
+    
     public Color getBackgroundColor() {
         return backgroundColor;
     }
