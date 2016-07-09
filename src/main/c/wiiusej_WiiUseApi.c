@@ -553,14 +553,14 @@ JNIEXPORT void JNICALL Java_wiiusej_WiiUseApi_specialPoll
 								cl->rjs.max.x,cl->rjs.max.y,
 								cl->rjs.min.x,cl->rjs.min.y,
 								cl->rjs.center.x,cl->rjs.center.y);
-					} else if (wiimotes[i]->exp.type == EXP_BALANCE_BOARD) {
+					} else if (wiimotes[i]->exp.type == EXP_WII_BOARD) {
 						/* put balance board values in wiimote generic event */
 						mid = (*env)->GetMethodID(env, cls,
 								"addBalanceBoardEventToPreparedWiimoteEvent", "(FFFF)V");
 						if (mid == 0) {
 							return;
 						}
-						struct balance_board_t* bb = (balance_board_t*)&wiimotes[i]->exp.bb;
+						struct wii_board_t* bb = (wii_board_t*)&wiimotes[i]->exp.wb;
 						(*env)->CallVoidMethod(env, gath, mid,
 								/* weight */
 								bb->tr,
@@ -650,7 +650,7 @@ JNIEXPORT void JNICALL Java_wiiusej_WiiUseApi_specialPoll
 				(*env)->CallVoidMethod(env, gath, mid, wiimotes[i]->unid);
 				break;
 
-				case WIIUSE_BALANCE_BOARD_CTRL_INSERTED:
+				case WIIUSE_WII_BOARD_CTRL_INSERTED:
 				/* the balance board was just connected */
 				mid = (*env)->GetMethodID(env, cls, "addBalanceBoardInsertedEvent", "(I)V");
 				if (mid == 0) {
@@ -659,7 +659,7 @@ JNIEXPORT void JNICALL Java_wiiusej_WiiUseApi_specialPoll
 				(*env)->CallVoidMethod(env, gath, mid, wiimotes[i]->unid);
 				break;
 
-				case WIIUSE_BALANCE_BOARD_CTRL_REMOVED:
+				case WIIUSE_WII_BOARD_CTRL_REMOVED:
 				/* the balance board disconnected */
 				mid = (*env)->GetMethodID(env, cls, "addBalanceBoardRemovedEvent", "(I)V");
 				if (mid == 0) {

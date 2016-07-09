@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-	compile 'com.github.boukefalos:libwiiuse:0.14'
+	compile 'com.github.boukefalos:libwiiuse:0.15'
 }
 
 group = 'com.github.boukefalos'
@@ -64,7 +64,7 @@ model {
 }
 
 def jniHeadersDir = file("$buildDir/headers")
-
+/*
 task jniHeaders(dependsOn: compileJava) {
 	def outputFile = file("$jniHeadersDir/wiiusej_WiiUseApi.h")
 	inputs.files sourceSets.main.output
@@ -77,7 +77,7 @@ task jniHeaders(dependsOn: compileJava) {
 		args 'wiiusej.WiiUseApi'
 	}
 }
-
+*/
 libraries {
 	main {
 		baseName project.archivesBaseName
@@ -88,9 +88,9 @@ libraries {
 			cCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include"
 			cCompiler.args "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include/win32"
 			linker.args '-Wl,--kill-at', '-static-libgcc', '-static-libstdc++'
-			tasks.withType(CCompile) { task ->
+			/*tasks.withType(CCompile) { task ->
 				task.dependsOn jniHeaders
-			}
+			}*/
 			lib library: 'wiiuse', linkage: 'static'
 		}
 	}
@@ -155,7 +155,7 @@ mainPom.withXml { provider ->
 	def dep = deps.appendNode('dependency')
 	dep.appendNode('groupId', 'com.github.boukefalos')
 	dep.appendNode('artifactId', 'libwiiuse')
-	dep.appendNode('version', '0.14')
+	dep.appendNode('version', '0.15')
 }
 
 jar {
